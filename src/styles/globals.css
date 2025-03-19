@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --tw-bg-opacity: 1;
+    /* font-family: 'Prata', sans-serif !important; */
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important; */
+    font-family: 'Times New Roman', Times, serif !important;
+
+}
+
+.content-center {
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
+
+@media (max-width: 992px) {
+    .content-center {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}

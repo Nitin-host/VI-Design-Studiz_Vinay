@@ -1,0 +1,166 @@
+/* Base styles */
+.custom-nav {
+    gap: 2rem;
+}
+
+.btn-navbar {
+    display: inline-block;
+    width: auto;
+    overflow: hidden;
+}
+
+.nav-link {
+    font-size: 1.5rem !important;
+    font-weight: 500 !important;
+    color: black !important;
+}
+
+.nav-link:hover {
+    color: #ED820E !important;
+}
+
+.dropdown-item:hover {
+    color: #ED820E !important;
+}
+
+.navbar-brand {
+    margin-left: 10%;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: 100px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.brand-title {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.brand-color {
+    color: #ED820E;
+}
+
+/* Button styles */
+.btn-nav-visible,
+.btn-nav-hidden {
+    color: rgb(59, 59, 59) !important;
+    letter-spacing: 1.5px;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-nav-hidden:hover {
+    color: #ED820E !important;
+}
+
+/* Default state for visible button */
+.btn-nav-visible {
+    transform: translateY(50%);
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Default state for hidden button */
+.btn-nav-hidden {
+    transform: translateY(90%);
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Hover effect */
+.btn-navbar:hover .btn-nav-visible {
+    transform: translateY(0);
+    opacity: 0;
+}
+
+.btn-navbar:hover .btn-nav-hidden {
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .navbar-brand img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .navbar-brand {
+        margin-left: 5%;
+    }
+
+    .custom-nav {
+        gap: 1rem;
+    }
+
+    .nav-link {
+        font-size: 1.2rem !important;
+    }
+
+    .btn-nav-visible,
+    .btn-nav-hidden {
+        font-size: 1.2rem;
+    }
+
+    .navbar-collapse {
+        background-color: white;
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-navbar {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar-brand img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .navbar-brand {
+        margin-left: 2%;
+    }
+
+    .brand-title {
+        font-size: 1.5rem;
+    }
+
+    .nav-link {
+        font-size: 1rem !important;
+    }
+
+    .btn-nav-visible,
+    .btn-nav-hidden {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand img {
+        width: 50px;
+        /* Smallest size */
+        height: 50px;
+        /* Smallest size */
+    }
+
+    .brand-title {
+        font-size: 1rem;
+    }
+}
