@@ -1,0 +1,418 @@
+.home-container {
+    margin-top: 7rem !important;
+}
+
+.sub-title {
+    font-size: 6rem;
+    font-weight: 290;
+}
+
+.title {
+    margin-top: 0.8rem;
+    font-size: 5rem;
+    font-weight: 290;
+}
+
+.changing-text {
+    width: 50%;
+    display: inline-block;
+    margin-left: 1.5rem;
+    font-size: 5rem;
+    font-weight: 290;
+    animation: blurFade 1.5s ease-in-out;
+}
+
+.sub-changing-text {
+    display: inline-block;
+    font-weight: 300;
+    animation: blurFade 1.5s ease-in-out;
+}
+
+@keyframes blurFade {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+    }
+
+    50% {
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0px);
+    }
+}
+
+.desgin-image {
+    width: 100%;
+}
+
+.home-banner {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.home-banner-bottom {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+
+.about-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    max-width: 100%;
+    display: block;
+    white-space: pre-line;
+    line-height: 1.6;
+}
+
+.sub-about-text {
+    margin-top: 5rem;
+}
+
+.about-text.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.our-work {
+    display: inline-block;
+    border-bottom: 1px solid black;
+}
+
+.our-work-description {
+    /* margin-left: 40rem !important; */
+    transition: margin-left 0.3s ease;
+}
+
+.our-work-image {
+    width: 100%;
+    /* height: 100%; */
+    border-radius: 5px;
+}
+
+.min-description {
+    margin-top: 3rem;
+    width: 85%;
+}
+
+
+.btn-project {
+    font-size: 1.5rem;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    color: black !important;
+}
+
+.btn-project:hover {
+    text-decoration-line: underline;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+
+.fixed-image-container {
+    margin-top: 7rem;
+    margin-bottom: 15rem;
+}
+
+.fixed-image {
+    background-image: url(../../public/COMMERCAIL-INTERIORS/BRONZE\ \(2\).jpg);
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    object-fit: cover;
+    background-attachment: fixed;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.content {
+    margin-top: 5rem;
+}
+
+
+.approach-title {
+    margin-top: 3rem;
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+.approach-content {
+    font-size: 1.3rem;
+}
+
+.approach-subtitle {
+    display: inline-block;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+}
+
+.approach-description {
+    margin-top: 5rem !important;
+    margin-left: 20rem !important;
+}
+
+
+.service-subtitle {
+    display: inline-block;
+    border-bottom: 1px solid black;
+    padding-bottom: 4px;
+    margin-top: 4rem;
+}
+
+.service-title {
+    margin-top: 2rem;
+    font-size: 5rem;
+    font-weight: 800;
+    width: 60%;
+}
+
+.desgin-title {
+    display: inline-block;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    font-size: 2.5rem;
+}
+
+.move-right {
+    margin-left: 40% !important;
+    width: fit-content;
+}
+
+
+
+.client-logo {
+    max-width: 80%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+
+    .title,
+    .changing-text {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .title,
+    .changing-text {
+        font-size: 3.5rem;
+    }
+
+    .changing-text {
+        margin-left: 1rem;
+    }
+
+    .sub-title {
+        font-size: 2.5rem;
+    }
+
+    .our-work-description {
+        margin-left: 1rem !important;
+    }
+
+    .approach-title {
+        font-size: 3.5rem;
+    }
+
+    .approach-description {
+        margin-top: 2rem !important;
+        margin-left: 1rem !important;
+    }
+
+    .service-title {
+        width: 100%;
+        font-size: 3.5rem;
+    }
+
+    .move-right {
+        margin-left: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .title,
+    .changing-text {
+        font-size: 3rem;
+    }
+
+    .changing-text {
+        width: 40%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .changing-text {
+        font-size: 1.5rem;
+    }
+
+    .changing-text {
+        width: 70%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .home-banner {
+        height: 100%;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .sub-about-text {
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+
+    .about-text {
+        font-size: 1.5rem !important;
+    }
+
+    .home-title {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-banner-bottom {
+        margin-top: 3rem;
+    }
+
+    .our-work {
+        font-size: 1rem;
+    }
+
+    .sub-title {
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .sub-changing-text {
+        font-size: 1.2rem;
+    }
+
+    .our-work-description {
+        margin-left: 0px !important;
+    }
+
+    .text-muted {
+        font-size: 1rem;
+    }
+
+    .studioz-content {
+        font-size: 0.6rem;
+    }
+
+    .desgin-image {
+        margin-top: 50px;
+    }
+
+    .min-description {
+        margin-top: 1rem;
+    }
+
+    .approach-title {
+        margin-top: 1rem !important;
+        font-size: 1.8rem;
+    }
+
+    .approach-subtitle {
+        font-size: 1rem;
+    }
+
+    .approach-description {
+        margin-left: 0rem !important;
+    }
+
+    .approach-content {
+        font-size: 0.7rem;
+        margin-bottom: 2px;
+    }
+
+    .fixed-image-container {
+        margin-bottom: 0px;
+    }
+
+    .service-image {
+        margin-top: 0px;
+    }
+
+    .service-title {
+        width: 100%;
+        font-size: 2rem;
+    }
+
+    .move-right {
+        margin-left: 0px !important;
+    }
+
+    .desgin-title {
+        font-size: 0.8rem;
+    }
+
+    .service-descriprion {
+        font-size: 0.7rem;
+    }
+
+    .min-description {
+        margin-left: 0px !important;
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .btn-project {
+        font-size: 0.9rem;
+    }
+
+    .client-logo {
+        width: 100%;
+    }
+
+    .client-description {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .service-title {
+        font-size: 1.7rem;
+    }
+
+    .service-subtitle {
+        font-size: 1rem;
+    }
+}

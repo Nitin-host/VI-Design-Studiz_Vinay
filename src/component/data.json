@@ -1,0 +1,105 @@
+{
+    "home": {
+        "title": "We Do",
+        "changingText": [
+            "ARCHITECTURE",
+            "INTERIORS",
+            "CONTRACTING"
+        ],
+        "bannerImage": "/homeBanner.jpg",
+        "about": {
+            "description": "VI Design Studioz is a team of Passionate and Creative team based in Hyderabad, dedicated to design with light, aesthetics and sustainable features to bring visionary concepts to life.",
+            "subDescription": "Combining smart, creativity & sustainability. We take our clients challenges and transform them into exceptionally innovative design."
+        },
+        "ourWork": {
+            "title": "Our work",
+            "changingText": [
+                "RENOVATION & REMODELING",
+                "SPACE PLANNING",
+                "3D VISUALIZATION",
+                "ARCHITECTURE",
+                "INTERIORS"
+            ],
+            "description": [
+                "We deliver lively spaces which are intimately connected to the people who use them and transform the urban fabric in which they are built.",
+                "Our experience and creative spirit enables us to take advantage of unexpected potentials, manage complex conditions, and successfully deliver projects that are truly outstanding, truly active – truly social."
+            ],
+            "image": "/LANDSCAPING/D.jpg",
+            "buttonText": "View projects +",
+            "buttonLink": "/project"
+        },
+        "studioz": {
+            "title": "VI Design Studioz",
+            "subtitle": "Subtle Sophistication",
+            "content": [
+                "Simplicity and practicality are at the heart of our architectural philosophy. We believe that thoughtful, minimalist designs not only enhance functionality but also foster a deeper connection between spaces and their users. Our approach focuses on creating clean, purposeful forms that allow architecture to blend seamlessly with its surroundings.",
+                "By emphasizing efficient layouts and sustainable materials, we craft spaces that prioritize comfort, usability, and longevity. Each design is a balance of beauty and practicality, thoughtfully tailored to meet the needs of today while remaining adaptable for the demands of tomorrow, ensuring timeless value in every project."
+            ],
+            "image": "/images/image4.jpg"
+        },
+        "approach": {
+            "subtitle": "Our approach",
+            "title": "Purposeful Design & Timeless Impact",
+            "content": [
+                [
+                    "Our approach is rooted in the belief that great architecture is both intuitive and purposeful, seamlessly blending form, function, and meaning. We begin each project by immersing ourselves in the unique aspirations of our clients and the nuances of the environment, ensuring that every design responds thoughtfully to its context.",
+                    "Guided by the principles of simplicity, sustainability, and innovation, we strive to craft designs that feel organic, adaptable, and enduring. Whether it's through clean, minimalist aesthetics or the use of sustainable materials and technologies, we aim to create spaces that are as efficient as they are inspiring."
+                ],
+                [
+                    "This deep understanding allows us to create spaces that are not only visually striking but also practical, enhancing how people interact with and experience their surroundings.",
+                    "From initial concept to final execution, our collaborative process integrates precision and creativity, transforming bold ideas into timeless structures that enrich lives and harmonize with the natural and built environment."
+                ]
+            ]
+        },
+        "services": {
+            "subtitle": "Our Service",
+            "title": "We do Inside-Outside Design",
+            "list": [
+                {
+                    "title": "Master Planning",
+                    "description": "Civic structuring and place making"
+                },
+                {
+                    "title": "Architecture",
+                    "description": "Integrated building development through all scales"
+                },
+                {
+                    "title": "Interior Design",
+                    "description": "Unique spatial concepts for meaningful experiences"
+                },
+                {
+                    "title": "Landscape",
+                    "description": "Captivating connectivity of nature and community"
+                },
+                {
+                    "title": "Design & Build Contracts",
+                    "description": "Designing and building residential & commercial spaces"
+                }
+            ],
+            "image": "/images/image5.jpg"
+        },
+        "clients": {
+            "subtitle": "Our clients",
+            "title": "We Work with Ambitious Clients",
+            "description": "We share our clients' vision to create iconic destinations that positively influence the people who live, work, plug & play there.",
+            "logos": [
+                {
+                    "image": "./clients/TM.svg",
+                    "alt": "Tech-Mahindra"
+                },
+                {
+                    "image": "./clients/next-rack.svg",
+                    "alt": "next-racker"
+                },
+                {
+                    "image": "./clients/PT.png",
+                    "alt": "people-Tech"
+                },
+                {
+                    "image": "./clients/NR.png",
+                    "alt": "nutri-rich"
+                }
+            ]
+        }
+    }
+}
