@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Marquee from 'react-fast-marquee';
-import styles from '../styles/marquee.module.css'; // Import CSS Module
+import styles from '../styles/marquee.module.css';
 
 export default class MarqueeComponent extends Component {
     render() {
