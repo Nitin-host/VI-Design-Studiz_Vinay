@@ -1,5 +1,5 @@
 // import NavBar from "@/component/NavBar";
-import React, { createContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import NavBar from '../component/NavBar';
@@ -21,7 +21,6 @@ const titleMap = {
     // '/contact': 'CONTACT | VI Design Studio',
 };
 
-const AppContext = createContext();
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
@@ -42,11 +41,9 @@ function MyApp({ Component, pageProps }) {
         };
     }, [router]);
 
-    const [state, setState] = useState(null);
 
     return (
         <>
-         <AppContext.Provider value={{ state, setState }}>
             <Head>
                 <title>{title}</title>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,7 +52,6 @@ function MyApp({ Component, pageProps }) {
             <NavBar />
             <Component {...pageProps} />
             <Footer />
-         </AppContext.Provider>
         </>
     );
 }
