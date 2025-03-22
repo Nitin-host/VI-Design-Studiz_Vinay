@@ -67,14 +67,14 @@ export default class NavBar extends Component {
                                         <NavDropdown.Item href='/interiors'>INTERIORS</NavDropdown.Item>
                                         <NavDropdown.Item href='/land-scape'>LANDSCAPE</NavDropdown.Item>
                                     </NavDropdown>
-                                    <div className='btn-navbar mt-0 ms-3'>
+                                    {/* <div className='btn-navbar mt-0 ms-3'>
                                         <a href='/contact' className='btn-nav-visible text-decoration-none fw-bold'>
                                             Contact
                                         </a>
                                         <a href='/contact' className='btn-nav-hidden text-decoration-none fw-bold'>
                                             Contact
                                         </a>
-                                    </div>
+                                    </div> */}
                                 </Nav>
                             </div>
                         </Navbar.Collapse>

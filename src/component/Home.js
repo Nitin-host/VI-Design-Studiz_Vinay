@@ -5,7 +5,7 @@ import Carousel3D from './carousel';
 import MarqueeComponent from './marquee';
 import data from './data.json';
 
-const Home = () => {
+export default function Home () {
     const { home } = data;
     const [index, setIndex] = useState(0);
 
@@ -155,5 +155,3 @@ const Home = () => {
         </div>
     );
 };
-
-export default Home;
