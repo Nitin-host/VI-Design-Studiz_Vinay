@@ -3,7 +3,7 @@
 }
 
 .sub-title {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 290;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .min-description {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     width: 85%;
 }
 
@@ -121,7 +121,7 @@
     border: none;
     background-color: transparent;
     text-decoration: none;
-    color: black !important;
+    color: #ED820E !important;
 }
 
 .btn-project:hover {
@@ -154,7 +154,7 @@
 
 .approach-title {
     margin-top: 3rem;
-    font-size: 5rem;
+    font-size: 4rem;
     font-weight: 900;
 }
 
@@ -183,8 +183,8 @@
 
 .service-title {
     margin-top: 2rem;
-    font-size: 5rem;
-    font-weight: 800;
+    font-size: 4.5rem;
+    font-weight: 600;
     width: 60%;
 }
 
