@@ -1,9 +1,6 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-// import { CONTACT_DATA } from './ContactData';
-// import PageFooter from '../../footer/PageFooter';
 
-// import './Contact.scss';
 
 export default class Contact extends React.Component {
 
@@ -85,16 +82,9 @@ export default class Contact extends React.Component {
                         </div>
                     </div>
                 </div>
-
-                <div className="bg-light">
+                
                     <div className='container'>
                         <Row className="m-0" xs="1" md="2">
-                            <Col className="data-v-center">
-                                <div className='heading'>
-                                    {/* <h1 className='title-heading pt-4'>{CONTACT_DATA.sectionTwoTitle}</h1>
-                                    <p className="mt-3">{CONTACT_DATA.sectionTwoDescription}<a href="mailto:DigitalDots <info@digitaldots.ai>">info@digitaldots.ai</a></p> */}
-                                </div>
-                            </Col>
                             <Col>
                                 <div className="card shadow rounded border-0 my-3">
                                     <div className="card-body py-5">
@@ -159,7 +149,6 @@ export default class Contact extends React.Component {
                             </Col>
                         </Row>
                     </div>
-                </div>
                 <div className='container section'>
                     <div>
                         <Row className="m-0 content-section" xs="1" md="2">
