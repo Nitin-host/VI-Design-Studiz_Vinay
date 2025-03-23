@@ -10,13 +10,13 @@ export default class Footer extends Component {
                     <Col md={3} className="mb-3">
                         <ul className="list-unstyled">
                             <li className="footer-item"><a href="/" className="footer-link">Home</a></li>
-                            {/* <li className="footer-item"><a href='/contact' className="footer-link">Contact</a></li> */}
+                            <li className="footer-item"><a href='/contact' className="footer-link">Contact</a></li>
                         </ul>
                     </Col>
                     <Col md={3} className="mb-3">
                         <ul className="list-unstyled">
                             {/* <li className="footer-item"><a href='/project' className="footer-link">Project</a></li> */}
-                            <li className="footer-item"><a href='/architecture' className="footer-link">Architecture</a></li>
+                            {/* <li className="footer-item"><a href='/architecture' className="footer-link">Architecture</a></li> */}
                             <li className="footer-item"><a href='/interiors' className="footer-link">Interior</a></li>
                             <li className="footer-item"><a href='/land-scape' className="footer-link">Landscape</a></li>
                         </ul>
@@ -30,7 +30,7 @@ export default class Footer extends Component {
                                 rel="noopener noreferrer"
                                 className="me-3"
                             >
-                                <Instagram color='black' size={40} />
+                                <Instagram  size={40} />
                             </a>
                             <a
                                 href='https://wa.me/918143233330'

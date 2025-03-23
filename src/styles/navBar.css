@@ -3,6 +3,10 @@
     gap: 2rem;
 }
 
+.navbar-bg{
+    background-color: white;
+}
+
 .btn-navbar {
     display: inline-block;
     width: auto;
@@ -163,4 +167,52 @@
     .brand-title {
         font-size: 1rem;
     }
+}
+
+
+/*Dark Theme*/
+
+:root[class~="dark"] .navbar-bg{
+    background-color: black !important;
+    color: white;
+}
+
+:root[class~="dark"] .nav-link {
+    color: white !important;
+}
+
+:root[class~="dark"] .btn-nav-visible {
+    color: rgb(255, 255, 255) !important;
+}
+
+:root[class~="dark"] .brand-title {
+    color: white;
+}
+
+:root[class~="dark"] .navbar-toggler-icon{
+    background-color: white;
+    border-radius: 5px;
+}
+
+:root[class~="dark"] .navbar-collapse.collapse.show,
+:root[class~="dark"] .navbar-collapse.collapsing{
+  background-color: black !important;
+  color: white !important;
+}
+
+:root[class~="dark"] .dropdown-menu.show,
+:root[class~="dark"] .dropdown-menu,
+:root[class~="dark"] .dropdown-item{
+    background-color: black;
+    color: white !important;
+}
+
+:root[class~="dark"] .dropdown-item:hover{
+    /* background-color: #343a40 !important; */
+    color: #ED820E !important;
+}
+
+:root[class~="dark"] .nav-link:hover,
+:root[class~="dark"] .btn-nav-hidden:hover{
+    color: #ED820E !important;
 }

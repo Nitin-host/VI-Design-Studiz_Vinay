@@ -23,7 +23,7 @@ export default function Home () {
     return (
         <div className="home-container content-center">
             <div className="home-title d-flex flex-row justify-content-center">
-                <h1 className="title">{home.title}</h1>
+                <h1 className="title-we">{home.title}</h1>
                 <div key={index} className="changing-text">
                     {home.changingText[index]}
                 </div>
@@ -74,14 +74,14 @@ export default function Home () {
                             </h3>
                         ))}
                     </div>
-                    <a
+                    {/* <a
                         href={home.ourWork.buttonLink}
                         data-aos="fade-up"
                         data-aos-once="true"
                         className="btn-project mt-auto align-self-start mt-5"
                     >
                         {home.ourWork.buttonText}
-                    </a>
+                    </a> */}
                 </Col>
             </Row>
             <MarqueeComponent />

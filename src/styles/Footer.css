@@ -17,7 +17,7 @@
 
 .footer-link:hover {
     letter-spacing: 5px;
-    color: #ED820E;
+    color: #ED820E !important;
 }
 
 .footer-heading {
@@ -33,6 +33,28 @@
     color: #f8f9fa;
 }
 
+.lucide-instagram {
+    /* background-color: #ED820E; */
+    color: #ED820E;
+}
+
+/* Dark theme styles */
+:root[class~="dark"] .footer-container {
+    background-color: #1a1a1a !important;
+}
+
+:root[class~="dark"] .footer-link {
+    color: #f8f9fa;
+}
+
+:root[class~="dark"] .footer-heading {
+    color: #f8f9fa !important;
+}
+
+:root[class~="dark"] .lucide-instagram {
+    /* background-color: #ED820E; */
+    color: #ED820E;
+}
 
 @media (max-width: 576px) {
     .footer-end {

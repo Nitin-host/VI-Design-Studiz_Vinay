@@ -3,22 +3,53 @@ import GalleryPage from '@/util/GalleryPage';
 
 export default function LandScaping() {
     const interiorsImage = {
-        'RESIDENTIAL': [
-            { title: "ARTISTIC", subtitle: "ENGRAVED PATTERNS", image: "/interiors/ARTISTIC-INTERIOR.jpg" },
-            { title: "BACK FLOWS", subtitle: "TOUCH OF SHADES", image: "/interiors/FLUTED-CURVE-PANELS.jpg" },
-            { title: "MOOD-ULAR MINIMALISM", subtitle: "SOFT TOUCH", image: "/interiors/CLASSIC-KITCHEN.jpg" },
-            { title: "GOLDEN AESTHETICS", subtitle: "LUXURY TOUCH", image: "/interiors/BED-ROOM.jpeg" },
-            { title: "CREAM PIE", subtitle: "ENGRAVING TOUCH", image: "/interiors/CREAMPIE.jpg" },
-            { title: "QUARTZ", subtitle: "TOUCH OF SATVARIO", image: "/interiors/RESIDENTIAL.jpeg" }
-        ],
-        'COMMERCIAL': [
-            { title: "INDUSTRIAL DESIGN", subtitle: "EXPOSED TEXTURES", image: "/interiors/CAPITAL-LAND.jpg" },
-            { title: "BACK TO HISTORY", subtitle: "SITTING LOUNGE", image: "/interiors/ENTRANCE-LOUNGE.jpeg" },
-            { title: "MODERN WAVES", subtitle: "LUXURY TOUCH", image: "/interiors/RECEPTION.png" },
-            { title: "CAFE", subtitle: "TOUCH OF COLOURS", image: "/interiors/CAFETRIA.jpg" },
-            { title: "GYM", subtitle: "LIFT UP", image: "/interiors/GYM.jpg" },
-            { title: "PEB STRUCTURE", subtitle: "ACP CLADDINGS", image: "/interiors/INDUSTRIAL.jpg" }
-        ]
+      '': [
+        {
+          title: "WHISPER CURVE",
+          subtitle: "",
+          image: "LANDSCAPING/Whispering_Curve.jpg",
+        },
+        {
+          title: "VILLASCAPE",
+          subtitle: "",
+          image: "LANDSCAPING/Villascape.jpg",
+        },
+        {
+          title: "TimberStone Retreat",
+          subtitle: "",
+          image: "LANDSCAPING/TimberStone_Retreat.jpg",
+        },
+        {
+          title: "The Tranquil Seat",
+          subtitle: "",
+          image: "LANDSCAPING/The_Tranquil_Seat.jpg",
+        },
+        {
+          title: "The Gateway Pavilion",
+          subtitle: "",
+          image: "LANDSCAPING/The_Gateway_Pavilion.jpg",
+        },
+        {
+          title: "Serene Arc Pergola",
+          subtitle: "",
+          image: "LANDSCAPING/Serene_Arc_Pergola.jpg",
+        },
+        {
+          title: "GreenWood Haven",
+          subtitle: "",
+          image: "LANDSCAPING/GreenWood_Haven.jpg",
+        },
+        {
+          title: "Crimson Canopy",
+          subtitle: "",
+          image: "LANDSCAPING/Crimson_Canopy.jpg",
+        },
+        {
+          title: "Bamboo Haven Bites",
+          subtitle: "",
+          image: "LANDSCAPING/Bamboo_Haven_Bites.jpg",
+        }
+      ],
     };
 
     const description = `Step into a world where contemporary design and sustainability come together to create exceptional interiors. 
