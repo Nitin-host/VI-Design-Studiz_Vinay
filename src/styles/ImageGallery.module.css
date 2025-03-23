@@ -6,6 +6,10 @@
     margin-top: 20px;
 }
 
+:root[class~="dark"] .section-title{
+    border-bottom: 2px solid white !important;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -47,6 +51,7 @@
     color: white;
     transform: translateY(10%);
     transition: transform 0.5s ease;
+     text-transform: uppercase !important;
 }
 
 .project-card:hover .project-overlay {

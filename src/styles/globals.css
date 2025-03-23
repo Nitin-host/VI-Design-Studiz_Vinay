@@ -1,3 +1,4 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,66 @@ body {
     /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important; */
     font-family: 'Times New Roman', Times, serif !important;
 
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: #ffffff;
+  color: #111827;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+:root[class~="dark"] body {
+  background-color: #0a0a0a;
+  color: #f3f4f6;
+}
+
+/* Theme transitions */
+* {
+  transition-property: color, background-color, border-color;
+  transition-duration: 200ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Dark mode styles for all pages */
+:root[class~="dark"] {
+  --bg-primary: #0a0a0a;
+  --text-primary: #f3f4f6;
+  --border-color: #374151;
+}
+
+/* Light mode styles for all pages */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #111827;
+  --border-color: #e5e7eb;
+}
+
+/* Apply theme variables to common elements */
+.page-content {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.card, 
+.container, 
+.section {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
 }
 
 .content-center {

@@ -8,6 +8,10 @@
     border-bottom: 5px solid black;
 }
 
+:root[class~="dark"] .galleryTitle{
+    border-bottom:  5px solid white;
+}
+
 .galleryDescription {
     width: 66%;
     line-height: 2;

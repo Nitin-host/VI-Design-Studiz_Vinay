@@ -7,7 +7,7 @@
     font-weight: 290;
 }
 
-.title {
+.title, .title-we {
     margin-top: 0.8rem;
     font-size: 5rem;
     font-weight: 290;
@@ -208,13 +208,35 @@
     object-fit: cover;
 }
 
+:root[class~="dark"] .our-work,
+:root[class~="dark"] .approach-subtitle,
+:root[class~="dark"] .service-subtitle,
+:root[class~="dark"] .desgin-title{
+    border-bottom: 1px solid white !important;
+}
+
+:root[class~="dark"] .changing-text,
+:root[class~="dark"] .sub-changing-text,
+:root[class~="dark"] .title,
+:root[class~="dark"] .approach-title,
+:root[class~="dark"] .service-title{
+    color: #ED820E;
+}
+
+:root[class~="dark"] .min-description{
+    color: white !important;
+}
+
+:root[class~="dark"] .text-muted{
+    color: rgb(173, 171, 171) !important;
+}
 
 
 
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
-
+    .title-we,
     .title,
     .changing-text {
         font-size: 4rem;
@@ -224,6 +246,7 @@
 @media (max-width: 992px) {
 
     .title,
+    .title-we,
     .changing-text {
         font-size: 3.5rem;
     }
@@ -260,7 +283,7 @@
 }
 
 @media (max-width: 768px) {
-
+    .title-we,
     .title,
     .changing-text {
         font-size: 3rem;
@@ -273,7 +296,8 @@
 
 @media (max-width: 576px) {
 
-    .title {
+    .title, 
+    .title-we {
         font-size: 1.5rem;
     }
 
