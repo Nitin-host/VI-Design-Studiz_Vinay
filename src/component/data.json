@@ -6,7 +6,7 @@
             "INTERIORS",
             "CONTRACTING"
         ],
-        "bannerImage": "/homeBanner.jpg",
+        "bannerImage": "/homeBanner.webp",
         "about": {
             "description": "VI Design Studioz is a team of Passionate and Creative team based in Hyderabad, dedicated to design with light, aesthetics and sustainable features to bring visionary concepts to life.",
             "subDescription": "Combining smart, creativity & sustainability. We take our clients challenges and transform them into exceptionally innovative design."
@@ -24,7 +24,7 @@
                 "We deliver lively spaces which are intimately connected to the people who use them and transform the urban fabric in which they are built.",
                 "Our experience and creative spirit enables us to take advantage of unexpected potentials, manage complex conditions, and successfully deliver projects that are truly outstanding, truly active – truly social."
             ],
-            "image": "/interiors/RESIDENTIAL.jpeg",
+            "image": "/interiors/RESIDENTIAL.webp",
             "buttonText": "View projects +",
             "buttonLink": "/project"
         },
@@ -35,7 +35,7 @@
                 "Simplicity and practicality are at the heart of our architectural philosophy. We believe that thoughtful, minimalist designs not only enhance functionality but also foster a deeper connection between spaces and their users. Our approach focuses on creating clean, purposeful forms that allow architecture to blend seamlessly with its surroundings.",
                 "By emphasizing efficient layouts and sustainable materials, we craft spaces that prioritize comfort, usability, and longevity. Each design is a balance of beauty and practicality, thoughtfully tailored to meet the needs of today while remaining adaptable for the demands of tomorrow, ensuring timeless value in every project."
             ],
-            "image": "/images/image4.jpg"
+            "image": "/images/image4.webp"
         },
         "approach": {
             "subtitle": "Our approach",
@@ -76,7 +76,7 @@
                     "description": "Designing and building residential & commercial spaces"
                 }
             ],
-            "image": "/images/image5.jpg"
+            "image": "/images/image5.webp"
         },
         "clients": {
             "subtitle": "Our clients",
@@ -92,11 +92,11 @@
                     "alt": "next-racker"
                 },
                 {
-                    "image": "/clients/PT.png",
+                    "image": "/clients/PT.avif",
                     "alt": "people-Tech"
                 },
                 {
-                    "image": "/clients/NR.png",
+                    "image": "/clients/NR.avif",
                     "alt": "nutri-rich"
                 }
             ]

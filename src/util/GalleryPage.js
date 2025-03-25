@@ -8,7 +8,7 @@ export default function GalleryPage({ title, description, imageData, banner }) {
     return (
         <div className={`{${styles.galleryContainer}} content-center`}>
             <div className={styles.slowMotionContainer}>
-                <Image width={500} height={500} quality={100} src={banner} alt={title} className={styles.slowMotionImage} />
+                <Image width={500} height={500} quality={100} priority src={banner} alt={title} className={styles.slowMotionImage} />
             </div>
             <h1 className={styles.galleryTitle}>{title}</h1>
             <h5 className={styles.galleryDescription}>

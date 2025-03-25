@@ -2,52 +2,52 @@ import React from 'react';
 import GalleryPage from '@/util/GalleryPage';
 
 export default function LandScaping() {
-    const interiorsImage = {
+    const landscapeImage = {
       "": [
         {
           title: "WHISPER CURVE",
           subtitle: "",
-          image: "LANDSCAPING/Whispering_Curve.jpg",
+          image: "/LANDSCAPING/Whispering_Curve.webp",
         },
         {
           title: "VILLASCAPE",
           subtitle: "",
-          image: "LANDSCAPING/Villascape.jpg",
+          image: "/LANDSCAPING/Villascape.webp",
         },
         {
           title: "The Tranquil Seat",
           subtitle: "",
-          image: "LANDSCAPING/The_Tranquil_Seat.jpg",
+          image: "/LANDSCAPING/The_Tranquil_Seat.webp",
         },
         {
           title: "The Gateway Pavilion",
           subtitle: "",
-          image: "LANDSCAPING/The_Gateway_Pavilion.jpg",
+          image: "/LANDSCAPING/The_Gateway_Pavilion.webp",
         },
         {
           title: "Serene Arc Pergola",
           subtitle: "",
-          image: "LANDSCAPING/Serene_Arc_Pergola.jpg",
+          image: "/LANDSCAPING/Serene_Arc_Pergola.webp",
         },
         {
           title: "GreenWood Haven",
           subtitle: "",
-          image: "LANDSCAPING/GreenWood_Haven.jpg",
+          image: "/LANDSCAPING/GreenWood_Haven.webp",
         },
         {
           title: "Crimson Canopy",
           subtitle: "",
-          image: "LANDSCAPING/Crimson_Canopy.jpg",
+          image: "/LANDSCAPING/Crimson_Canopy.webp",
         },
         {
           title: "TimberStone Retreat",
           subtitle: "",
-          image: "LANDSCAPING/TimberStone_Retreat.jpg",
+          image: "/LANDSCAPING/TimberStone_Retreat.webp",
         },
         {
           title: "Bamboo Haven Bites",
           subtitle: "",
-          image: "LANDSCAPING/Bamboo_Haven_Bites.jpg",
+          image: "/LANDSCAPING/Bamboo_Haven_Bites.webp",
         },
       ],
     };
@@ -59,11 +59,11 @@ export default function LandScaping() {
     uplift, and stand the test of time, all while respecting the planet.`;
 
     return (
-        <GalleryPage
-            title="LANDSCAPE"
-            description={description}
-            imageData={interiorsImage}
-            banner="/LANDSCAPING/mainLandscape.jpg"
-        />
+      <GalleryPage
+        title="LANDSCAPE"
+        description={description}
+        imageData={landscapeImage}
+        banner="/LANDSCAPING/mainLandscape.webp"
+      />
     );
 }
