@@ -16,7 +16,7 @@
     max-width: 200px;
     max-height: 200px;
     transform-style: preserve-3d;
-    transition: transform 1s, opacity 1s;
+    transition: transform 1s ease, opacity 1s ease;
 }
 
 .carouselItem img {
@@ -24,6 +24,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    backface-visibility: hidden; /* iOS Fix */
+    -webkit-backface-visibility: hidden; /* Safari fix */
+    transform: translateZ(0); /* Forces GPU rendering on iPhone */
 }
 
 @media (max-width: 1024px) {
@@ -53,11 +56,18 @@
 @media (max-width: 480px) {
     .carousel {
         height: 25vh;
-        perspective: 400px;
+        perspective: 500px;
     }
 
     .carouselItem {
         width: 30vw;
         height: 30vw;
+        z-index: 1;
+    }
+
+    .carouselItem img{
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        transform: translateZ(0);
     }
 }

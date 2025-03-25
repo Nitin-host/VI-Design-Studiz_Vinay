@@ -58,12 +58,12 @@ export default class NavBar extends Component {
             >
               <Image
                 src={logo}
-                width={100}
-                height={100}
+                // width={100}
+                // height={100}
                 alt="logo"
                 className="navbar-logo"
               />
-              <h3 className="mt-4 ms-3 brand-title">
+              <h3 className="mt-1 ms-3 brand-title">
                 Design Studio<span className="brand-color">z</span>
               </h3>
             </Navbar.Brand>

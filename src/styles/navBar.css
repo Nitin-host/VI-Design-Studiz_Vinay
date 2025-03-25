@@ -23,6 +23,11 @@
     color: #ED820E !important;
 }
 
+.navbar-brand img{
+    width: 50px !important;
+    height: 50px !important;
+}
+
 .dropdown-item:hover {
     color: #ED820E !important;
 }

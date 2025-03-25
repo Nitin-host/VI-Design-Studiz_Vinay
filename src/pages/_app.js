@@ -11,6 +11,7 @@ import '../styles/homePage.css';
 import '../styles/globals.css';
 import '../styles/interiors.css';
 import '../styles/Footer.css';
+import '../styles/contact.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const titleMap = {
