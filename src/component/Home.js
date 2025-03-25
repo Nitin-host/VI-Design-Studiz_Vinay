@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import Aos from 'aos';
 import { Row, Col } from 'react-bootstrap';
 import Carousel3D from './carousel';
@@ -9,6 +9,8 @@ import Image from 'next/image';
 export default function Home () {
     const { home } = data;
     const [index, setIndex] = useState(0);
+     const imageRef = useRef(null);
+     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(() => {
         Aos.init({ duration: 1000 });
@@ -20,6 +22,24 @@ export default function Home () {
         }, 3000);
         return () => clearInterval(interval);
     }, [home.changingText.length]);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsLoaded(true);
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.1 }
+      );
+
+      if (imageRef.current) {
+        observer.observe(imageRef.current);
+      }
+
+      return () => observer.disconnect();
+    }, []);
 
     return (
       <div className="home-container content-center">
@@ -33,7 +53,7 @@ export default function Home () {
           width={500}
           height={500}
           priority
-          quality={100}
+          quality={80}
           src={home.bannerImage}
           style={{ maxWidth: "100%", height: "auto" }}
           alt="home-banner"
@@ -65,8 +85,8 @@ export default function Home () {
           <Image
             width={500}
             height={500}
-            quality={100}
-            src="/LANDSCAPING/00.jpg"
+            quality={80}
+            src="/LANDSCAPING/00.webp"
             alt="bottom-banner"
             className="home-banner-bottom"
             style={{ maxWidth: "100%", height: "auto" }}
@@ -89,7 +109,7 @@ export default function Home () {
             <Image
               width={500}
               height={300}
-              quality={100}
+              quality={80}
               src={home.ourWork.image}
               style={{ maxWidth: "100%", height: "auto" }}
               alt="Residential Interior"
@@ -135,7 +155,7 @@ export default function Home () {
               <Image
                 width={400}
                 height={300}
-                quality={100}
+                quality={80}
                 src={home.studioz.image}
                 style={{ maxWidth: "100%", height: "auto" }}
                 alt="logo"
@@ -145,7 +165,15 @@ export default function Home () {
           </Row>
         </div>
         <div className="fixed-image-container">
-          <div className="fixed-image"></div>
+          <div
+            ref={imageRef}
+            className="fixed-image"
+            style={{
+              backgroundImage: isLoaded
+                ? "url('/COMMERCAIL-INTERIORS/BRONZE (2).webp')"
+                : "none",
+            }}
+          ></div>
           <div className="content" data-aos-once="true">
             <h3 className="approach-subtitle">{home.approach.subtitle}</h3>
             <h1 className="approach-title">{home.approach.title}</h1>
@@ -160,11 +188,12 @@ export default function Home () {
             ))}
           </div>
         </div>
+
         <div className="mt-5">
           <Image
             width={500}
             height={500}
-            quality={100}
+            quality={80}
             src={home.services.image}
             style={{ width: "100%", height: "100%" }}
             alt="image"
@@ -191,9 +220,9 @@ export default function Home () {
           <Image
             width={600}
             height={500}
-            quality={100}
-            style={{ width: "100%", height: "auto", borderRadius: "10px" }} // Ensures responsiveness
-            src="/images/COMMERCIAL.jpeg"
+            quality={80}
+            style={{ width: "100%", height: "auto", borderRadius: "10px" }}
+            src="/images/COMMERCIAL.webp"
             alt="Commercial Building"
             priority
           />
@@ -206,7 +235,10 @@ export default function Home () {
                   key={i}
                   className="d-flex justify-content-center align-items-center"
                 >
-                  <img
+                  <Image
+                    width={100}
+                    height={100}
+                    style={{ width: "100%", height: "auto" }}
                     src={client.image}
                     alt={client.alt}
                     className="client-logo"

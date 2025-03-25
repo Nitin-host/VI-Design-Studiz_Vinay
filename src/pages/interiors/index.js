@@ -4,20 +4,20 @@ import GalleryPage from '@/util/GalleryPage';
 export default function Interiors() {
     const interiorsImage = {
         'RESIDENTIAL': [
-            { title: "ARTISTIC", subtitle: "ENGRAVED PATTERNS", image: "/interiors/ARTISTIC-INTERIOR.jpg" },
-            { title: "BACK FLOWS", subtitle: "TOUCH OF SHADES", image: "/interiors/FLUTED-CURVE-PANELS.jpg" },
-            { title: "MOOD-ULAR MINIMALISM", subtitle: "SOFT TOUCH", image: "/interiors/CLASSIC-KITCHEN.jpg" },
-            { title: "GOLDEN AESTHETICS", subtitle: "LUXURY TOUCH", image: "/interiors/BED-ROOM.jpeg" },
-            { title: "CREAM PIE", subtitle: "ENGRAVING TOUCH", image: "/interiors/CREAMPIE.jpg" },
-            { title: "QUARTZ", subtitle: "TOUCH OF SATVARIO", image: "/interiors/RESIDENTIAL.jpeg" }
+            { title: "ARTISTIC", subtitle: "ENGRAVED PATTERNS", image: "/interiors/ARTISTIC-INTERIOR.webp" },
+            { title: "BACK FLOWS", subtitle: "TOUCH OF SHADES", image: "/interiors/FLUTED-CURVE-PANELS.webp" },
+            { title: "MOOD-ULAR MINIMALISM", subtitle: "SOFT TOUCH", image: "/interiors/CLASSIC-KITCHEN.webp" },
+            { title: "GOLDEN AESTHETICS", subtitle: "LUXURY TOUCH", image: "/interiors/BED-ROOM.webp" },
+            { title: "CREAM PIE", subtitle: "ENGRAVING TOUCH", image: "/interiors/CREAMPIE.webp" },
+            { title: "QUARTZ", subtitle: "TOUCH OF SATVARIO", image: "/interiors/RESIDENTIAL.webp" }
         ],
         'COMMERCIAL': [
-            { title: "INDUSTRIAL DESIGN", subtitle: "EXPOSED TEXTURES", image: "/interiors/CAPITAL-LAND.jpg" },
-            { title: "BACK TO HISTORY", subtitle: "SITTING LOUNGE", image: "/interiors/ENTRANCE-LOUNGE.jpeg" },
-            { title: "MODERN WAVES", subtitle: "LUXURY TOUCH", image: "/interiors/RECEPTION.png" },
-            { title: "CAFE", subtitle: "TOUCH OF COLOURS", image: "/interiors/CAFETRIA.jpg" },
-            { title: "GYM", subtitle: "LIFT UP", image: "/interiors/GYM.jpg" },
-            { title: "PEB STRUCTURE", subtitle: "ACP CLADDINGS", image: "/interiors/INDUSTRIAL.jpg" }
+            { title: "INDUSTRIAL DESIGN", subtitle: "EXPOSED TEXTURES", image: "/interiors/CAPITAL-LAND.webp" },
+            { title: "BACK TO HISTORY", subtitle: "SITTING LOUNGE", image: "/interiors/ENTRANCE-LOUNGE.webp" },
+            { title: "MODERN WAVES", subtitle: "LUXURY TOUCH", image: "/interiors/RECEPTION.webp" },
+            { title: "CAFE", subtitle: "TOUCH OF COLOURS", image: "/interiors/CAFETRIA.webp" },
+            { title: "GYM", subtitle: "LIFT UP", image: "/interiors/GYM.webp" },
+            { title: "PEB STRUCTURE", subtitle: "ACP CLADDINGS", image: "/interiors/INDUSTRIAL.webp" }
         ]
     };
 
@@ -32,7 +32,7 @@ export default function Interiors() {
             title="INTERIORS"
             description={description}
             imageData={interiorsImage}
-            banner="/interiors/interiors-banner.jpeg"
+            banner="/interiors/interiors-banner.webp"
         />
     );
 }

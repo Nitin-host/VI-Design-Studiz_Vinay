@@ -6,14 +6,14 @@ import Image from 'next/image';
 export default class MarqueeComponent extends Component {
     render() {
         const images = [
-            '/COMMERCAIL-INTERIORS/4.jpg',
-            '/COMMERCAIL-INTERIORS/PTG (4).jpeg',
-            '/COMMERCAIL-INTERIORS/PTG (7).jpeg',
-            '/COMMERCAIL-INTERIORS/LO1.jpg',
-            '/COMMERCAIL-INTERIORS/PTG (2).jpeg',
-            '/COMMERCAIL-INTERIORS/PTG (8).jpeg',
-            '/COMMERCAIL-INTERIORS/PTG (6).jpeg',
-            '/images/image9.jpg'
+            '/COMMERCAIL-INTERIORS/4.webp',
+            '/COMMERCAIL-INTERIORS/PTG (4).webp',
+            '/COMMERCAIL-INTERIORS/PTG (7).webp',
+            '/COMMERCAIL-INTERIORS/LO1.webp',
+            '/COMMERCAIL-INTERIORS/PTG (2).webp',
+            '/COMMERCAIL-INTERIORS/PTG (8).webp',
+            '/COMMERCAIL-INTERIORS/PTG (6).webp',
+            '/images/image9.webp'
         ];
 
         return (

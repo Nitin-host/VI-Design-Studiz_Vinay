@@ -7,14 +7,14 @@ const Carousel3D = () => {
     const [screenWidth, setScreenWidth] = useState(0);
 
     const images = [
-        '/images/image1.jpeg',
-        '/images/image2.jpg',
-        '/images/image3.jpeg',
-        '/images/image4.jpg',
-        '/images/image5.jpg',
-        '/images/image6.jpg',
-        '/images/image7.jpg',
-        '/images/image8.jpg',
+        '/images/image1.webp',
+        '/images/image2.webp',
+        '/images/image3.webp',
+        '/images/image4.webp',
+        '/images/image5.webp',
+        '/images/image6.webp',
+        '/images/image7.webp',
+        '/images/image8.webp',
     ];
 
     useEffect(() => {
