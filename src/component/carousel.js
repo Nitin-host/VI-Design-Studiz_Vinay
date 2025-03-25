@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/carousel.module.css';
+import Image from 'next/image';
 
 const Carousel3D = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -18,7 +19,6 @@ const Carousel3D = () => {
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            // Only run this code on the client-side
             const handleResize = () => {
                 setScreenWidth(window.innerWidth);
             };
@@ -37,29 +37,35 @@ const Carousel3D = () => {
         }
     }, [images.length]);
 
-    const getTranslateZ = () => {
-        if (screenWidth > 1024) return 400;
-        if (screenWidth > 768) return 250;
-        if (screenWidth > 480) return 200;
-        return 150;
-    };
+   const getTranslateZ = () => {
+     if (screenWidth > 1400) return 400;
+     if (screenWidth > 1200) return 300;
+     if (screenWidth > 1024) return 250;
+     if (screenWidth > 768) return 200;
+     return 150;
+   };
 
     return (
-        <div className={styles.carousel}>
-            {images.map((image, index) => (
-                <div
-                    key={index}
-                    className={styles.carouselItem}
-                    style={{
-                        transform: `rotateY(${(index - currentIndex) * 30}deg) translateZ(${getTranslateZ()}px)`,
-                        opacity: index === currentIndex ? 1 : 0.2,
-                        transition: 'transform 1s, opacity 1s',
-                    }}
-                >
-                    <img src={image} alt={`Slide ${index}`} className="img-fluid" />
-                </div>
-            ))}
-        </div>
+      <div className={styles.carousel}>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={styles.carouselItem}
+            style={{
+              transform: `rotateY(${
+                (index - currentIndex) * 30
+              }deg) translateZ(${getTranslateZ()}px)`,
+              opacity: index === currentIndex ? 1 : 0.3,
+              zIndex: index === currentIndex ? 2 : 1,
+              transition: "transform 1s ease, opacity 1s ease",
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+            }}
+          >
+            <Image width={500} height={500} quality={100} src={image} alt={`Slide ${index}`} className="img-fluid" />
+          </div>
+        ))}
+      </div>
     );
 };
 

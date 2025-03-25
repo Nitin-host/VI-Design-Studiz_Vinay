@@ -112,11 +112,11 @@
     }
 
     .project-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr  !important;
     }
 
     .project-card {
-        height: 300px;
+        height: 300px !important;
     }
 
     .project-card:hover .project-overlay {
@@ -133,5 +133,27 @@
 
     .read-more {
         font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* Adjust to 2 columns */
+    }
+
+    .project-card {
+        height: 500px; /* Reduce height for better proportion */
+    }
+
+    .project-overlay {
+        padding: 30px 20px; /* Reduce padding for a compact look */
+    }
+
+    .project-overlay h2 {
+        font-size: 1.5rem; /* Slightly reduce font size */
+    }
+
+    .project-overlay p {
+        font-size: 0.9rem;
     }
 }

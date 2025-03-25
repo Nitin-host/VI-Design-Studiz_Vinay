@@ -24,7 +24,7 @@
                 "We deliver lively spaces which are intimately connected to the people who use them and transform the urban fabric in which they are built.",
                 "Our experience and creative spirit enables us to take advantage of unexpected potentials, manage complex conditions, and successfully deliver projects that are truly outstanding, truly active – truly social."
             ],
-            "image": "interiors/RESIDENTIAL.jpeg",
+            "image": "/interiors/RESIDENTIAL.jpeg",
             "buttonText": "View projects +",
             "buttonLink": "/project"
         },
@@ -84,19 +84,19 @@
             "description": "We share our clients' vision to create iconic destinations that positively influence the people who live, work, plug & play there.",
             "logos": [
                 {
-                    "image": "./clients/TM.svg",
+                    "image": "/clients/TM.svg",
                     "alt": "Tech-Mahindra"
                 },
                 {
-                    "image": "./clients/next-rack.svg",
+                    "image": "/clients/next-rack.svg",
                     "alt": "next-racker"
                 },
                 {
-                    "image": "./clients/PT.png",
+                    "image": "/clients/PT.png",
                     "alt": "people-Tech"
                 },
                 {
-                    "image": "./clients/NR.png",
+                    "image": "/clients/NR.png",
                     "alt": "nutri-rich"
                 }
             ]

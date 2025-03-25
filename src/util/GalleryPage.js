@@ -1,13 +1,14 @@
 import React from 'react';
 import ImageGallery from './ImageGallery';
 import styles from '../styles/GalleryPage.module.css';
+import Image from 'next/image';
 
 
 export default function GalleryPage({ title, description, imageData, banner }) {
     return (
         <div className={`{${styles.galleryContainer}} content-center`}>
             <div className={styles.slowMotionContainer}>
-                <img src={banner} alt={title} className={styles.slowMotionImage} />
+                <Image width={500} height={500} quality={100} src={banner} alt={title} className={styles.slowMotionImage} />
             </div>
             <h1 className={styles.galleryTitle}>{title}</h1>
             <h5 className={styles.galleryDescription}>

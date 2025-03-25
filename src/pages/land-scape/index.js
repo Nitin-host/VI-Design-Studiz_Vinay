@@ -3,7 +3,7 @@ import GalleryPage from '@/util/GalleryPage';
 
 export default function LandScaping() {
     const interiorsImage = {
-      '': [
+      "": [
         {
           title: "WHISPER CURVE",
           subtitle: "",
@@ -13,11 +13,6 @@ export default function LandScaping() {
           title: "VILLASCAPE",
           subtitle: "",
           image: "LANDSCAPING/Villascape.jpg",
-        },
-        {
-          title: "TimberStone Retreat",
-          subtitle: "",
-          image: "LANDSCAPING/TimberStone_Retreat.jpg",
         },
         {
           title: "The Tranquil Seat",
@@ -45,10 +40,15 @@ export default function LandScaping() {
           image: "LANDSCAPING/Crimson_Canopy.jpg",
         },
         {
+          title: "TimberStone Retreat",
+          subtitle: "",
+          image: "LANDSCAPING/TimberStone_Retreat.jpg",
+        },
+        {
           title: "Bamboo Haven Bites",
           subtitle: "",
           image: "LANDSCAPING/Bamboo_Haven_Bites.jpg",
-        }
+        },
       ],
     };
 
