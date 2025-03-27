@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
+import { Col, Row } from "reactstrap";
+import validator from "validator";
+import Avatar from "react-avatar";
+import PhoneInput from "react-phone-input-2";
+import { ToastContainer, toast } from "react-toastify";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const items = [
   {
-    src: "https://picsum.photos/id/123/1200/600",
-    altText: "Slide 1",
+    src: "/interiors/VINTAGE-CHARM.webp",
+    altText: "vintage-charm",
   },
   {
-    src: "https://picsum.photos/id/456/1200/600",
-    altText: "Slide 2",
+    src: "/LANDSCAPING/C.webp",
+    altText: "luxary",
   },
   {
-    src: "https://picsum.photos/id/678/1200/600",
+    src: "/COMMERCAIL-INTERIORS/PTG (6).webp",
     altText: "Slide 3",
   },
 ];
@@ -48,127 +51,122 @@ export default function Contact() {
     checkFormValidity();
   }, [formData, errors]);
 
-  const validateField = (name, value) => {
-    let error = "";
+const validateField = (name, value) => {
+  let error = "";
 
-    switch (name) {
-      case "name":
-        if (!value.trim()) error = "Name is required";
-        else if (value.length < 3) error = "Name must be at least 3 characters";
-        break;
-      case "email":
-        if (!value.trim()) error = "Email is required";
-        else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
-          error = "Invalid email format";
-        break;
-      case "phone":
-        if (!value) error = "Phone number is required";
-        else if (!value.startsWith("91")) error = "Only Indian numbers allowed";
-        else if (value.slice(2).length !== 10)
-          error = "Must be 10 digits (e.g. +91 22 1234 5678)";
-        break;
-      case "serviceType":
-        if (!value) error = "Service type is required";
-        break;
-      default:
-        break;
-    }
+  switch (name) {
+    case "name":
+      if (!value.trim()) error = "Name is required";
+      else if (value.length < 3) error = "Name must be at least 3 characters";
+      break;
+    case "email":
+      if (!value.trim()) error = "Email is required";
+      else if (!validator.isEmail(value)) error = "Invalid email format";
+      break;
+    case "phone":
+      if (!value) error = "Phone number is required";
+      else if (!validator.isMobilePhone(value, "en-IN"))
+        error = "Invalid Indian phone number";
+      break;
+    case "serviceType":
+      if (!value) error = "Service type is required";
+      break;
+    default:
+      break;
+  }
 
-    return error;
-  };
+  setErrors((prevErrors) => ({ ...prevErrors, [name]: error }));
+  return error;
+};
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-
-    const error = validateField(name, value);
-    setErrors((prev) => ({
-      ...prev,
-      [name]: error,
-    }));
-
-    if (error) {
-      toast.error(error, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
-    }
+    setFormData({[name]: value})
+    validateField(name, value);
   };
 
-  const handlePhoneChange = (value, country) => {
+  const handlePhoneChange = (value) => {
     setFormData((prev) => ({
       ...prev,
       phone: `+${value}`,
     }));
-
-    const error = validateField("phone", value);
-    setErrors((prev) => ({
-      ...prev,
-      phone: error,
-    }));
-
-    if (error) {
-      toast.error(error, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
-    }
+    console.log(value)
+    validateField("phone",value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (isFormValid) {
-      console.log("Form submitted:", formData);
-      toast.success("Form submitted successfully!", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
-      // Submit logic here (API call, etc.)
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        serviceType: "",
-      });
-      setErrors({
-        name: "",
-        email: "",
-        phone: "",
-        serviceType: "",
-      });
-    }
+ const handleSubmit = (e) => {
+   e.preventDefault();
 
-  };
+   let hasErrors = false;
+   let newErrors = {};
+
+   Object.keys(formData).forEach((field) => {
+     const error = validateField(field, formData[field]);
+     if (error) {
+       newErrors[field] = error;
+       toast.error(error, {
+         position: "top-right",
+         autoClose: 3000,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: true,
+         draggable: true,
+       });
+       hasErrors = true;
+        setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            serviceType: "",
+        });
+     }
+   });
+
+   if (hasErrors) {
+     setErrors(newErrors);
+     return;
+   }
+
+   console.log("Form submitted:", formData);
+   toast.success("Form submitted successfully!", {
+     position: "top-right",
+     autoClose: 3000,
+     hideProgressBar: false,
+     closeOnClick: true,
+     pauseOnHover: true,
+     draggable: true,
+   });
+
+   // Submit logic here (API call, etc.)
+   setFormData({
+     name: "",
+     email: "",
+     phone: "",
+     serviceType: "",
+   });
+   setErrors({
+     name: "",
+     email: "",
+     phone: "",
+     serviceType: "",
+   });
+ };
+
 
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
   };
 
   return (
     <section className="contact-container content-center">
       <ToastContainer />
-      <h1>Get In Touch.</h1>
+      <h1 className="text-start">Get In Touch.</h1>
       <div className="carousel-wrapper">
         <Slider {...settings}>
           {items.map((item, index) => (
@@ -182,8 +180,31 @@ export default function Contact() {
           ))}
         </Slider>
       </div>
+      <div>
+        <h1 className="text-start text-uppercase">General Enquiries</h1>
+        <h2 className="">videsignstudio@gmail.com</h2>
+      </div>
+      <Row>
+        <Col xs={12} md={4}>
+          <Avatar name="Vinay" size={200} src="" round />
+        </Col>
+        <Col xs={12} md={8}>
+          <h2>Vinay Guptha</h2>
+          <h6>ARCHITECT & INTERIORS</h6>
+          <p className="contact-cotent">
+            {`Vinay is a renowned architect and interior designer with over 6
+            years of experience in the field. He has a passion for creating
+            visually appealing and sustainable spaces. He is a firm believer in
+            the power of design to bring people together and create a positive
+            impact on the world. Vinay has worked in various industries,
+            including architecture, interior design, and urban planning. He is
+            currently working as a Principal Architect at a prestigious
+            engineering firm.`}
+          </p>
+        </Col>
+      </Row>
 
-      <form className="contact-form" onSubmit={handleSubmit} noValidate>
+      <form className="contact-form mt-3" onSubmit={handleSubmit} noValidate>
         <div className="form-group">
           <label htmlFor="name">Full Name</label>
           <input

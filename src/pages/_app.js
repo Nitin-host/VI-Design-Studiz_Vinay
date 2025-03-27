@@ -1,4 +1,3 @@
-// import NavBar from "@/component/NavBar";
 import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "next-themes";
 import Head from 'next/head';
@@ -7,8 +6,7 @@ import NavBar from '../component/NavBar';
 import Footer from '../component/footer';
 import '../styles/globals.css';
 import '../styles/navBar.css';
-import '../styles/homePage.css';
-import '../styles/globals.css';
+import '../styles/home.css';
 import '../styles/interiors.css';
 import '../styles/Footer.css';
 import '../styles/contact.css';
@@ -17,7 +15,7 @@ const titleMap = {
     '/': 'VI Design Studio',
     '/interiors': 'INTERIORS | VI Design Studio',
     '/land-scape': 'LANDSCAPE | VI Design Studio',
-    '/architecture': 'ARCHITECTURE | VI Design Studio',
+    // '/architecture': 'ARCHITECTURE | VI Design Studio',
     // '/project': 'PROJECT | VI Design Studio',
     '/contact': 'CONTACT | VI Design Studio',
 };
