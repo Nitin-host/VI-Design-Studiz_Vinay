@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Instagram } from 'lucide-react';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'reactstrap';
 
 export default class Footer extends Component {
     render() {

@@ -11,3 +11,11 @@
 .darkIcon {
   color: white;
 }
+
+.lightIcon:hover{
+  color: #010101;
+}
+
+.darkIcon:hover{
+  color: #f59e0b;
+}

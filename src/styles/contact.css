@@ -1,3 +1,318 @@
-.contact-container{
-    margin-top: 7rem;
+/* Base Styles */
+.contact-container {
+    margin-top:3rem;
+    max-width: 1200px;
+    padding: 2rem 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+/* Carousel Styles */
+.carousel-wrapper {
+  margin: 0 auto 3rem;
+  max-width: 1000px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* Form Styles */
+.contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 1.75rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #34495e;
+  font-size: 1rem;
+}
+
+.form-group label::after {
+  content: ' *';
+  color: #e74c3c;
+  opacity: 0.8;
+}
+
+/* Input Fields */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+  font-family: inherit;
+}
+
+.form-group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  background-color: #fff;
+}
+
+/* Phone Input Customization */
+.react-tel-input {
+  width: 100%;
+  font-family: inherit;
+}
+
+.react-tel-input .form-control {
+  width: 100% !important;
+  height: auto !important;
+  padding: 0.85rem 1rem 0.85rem 58px !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+  border: 1px solid #e0e0e0 !important;
+  background-color: #f8fafc !important;
+  transition: all 0.3s ease !important;
+}
+
+.react-tel-input .flag-dropdown {
+  border-radius: 8px 0 0 8px !important;
+  background-color: #f8fafc !important;
+  border-right: 1px solid #e0e0e0 !important;
+}
+
+.react-tel-input .form-control:focus {
+  border-color: #3498db !important;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2) !important;
+  background-color: #fff !important;
+}
+
+/* Error States */
+.error-input {
+  border-color: #e74c3c !important;
+  background-color: #fff8f8 !important;
+}
+
+.error-input:focus {
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2) !important;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #3498db;
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(41, 128, 185, 0.2);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  background: #bdc3c7 !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+  opacity: 0.7;
+}
+
+/* Toast Notifications */
+.Toastify__toast-container {
+  width: auto !important;
+  max-width: 400px;
+}
+
+.Toastify__toast {
+  border-radius: 8px !important;
+  font-family: inherit !important;
+}
+
+.error-hint {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.react-tel-input .form-control.error-input::placeholder {
+  color: #e74c3c;
+  opacity: 0.7;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .contact-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .carousel-wrapper {
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.75rem;
+  }
+  
+  .react-tel-input .form-control {
+    padding: 0.75rem 0.75rem 0.75rem 50px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container h1 {
+    font-size: 1.75rem;
+  }
+  
+  .contact-form {
+    padding: 1.25rem;
+  }
+  
+  .submit-btn {
+    padding: 0.85rem;
+    font-size: 0.9rem;
+  }
+  
+  .Toastify__toast-container {
+    width: 90% !important;
+    left: 5% !important;
+    right: 5% !important;
+  }
+}
+
+/* Dark Mode Styles */
+:root[class~="dark"] .contact-container h1 {
+  color: #f8f9fa;
+}
+
+:root[class~="dark"] .contact-form {
+  background: #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+:root[class~="dark"] .form-group label {
+  color: #e2e8f0;
+}
+
+:root[class~="dark"] .form-group input,
+:root[class~="dark"] .form-group select,
+:root[class~="dark"] .form-group textarea {
+  background-color: #4a5568;
+  border-color: #4a5568;
+  color: #f8f9fa;
+}
+
+:root[class~="dark"] .form-group input:focus,
+:root[class~="dark"] .form-group select:focus,
+:root[class~="dark"] .form-group textarea:focus {
+  background-color: #4a5568;
+  border-color: #63b3ed;
+  box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.3);
+}
+
+:root[class~="dark"] .react-tel-input .form-control {
+  background-color: #4a5568 !important;
+  border-color: #4a5568 !important;
+  color: #f8f9fa !important;
+}
+
+:root[class~="dark"] .react-tel-input .flag-dropdown {
+  background-color: #4a5568 !important;
+  border-right-color: #4a5568 !important;
+}
+
+:root[class~="dark"] .react-tel-input .form-control:focus {
+  background-color: #4a5568 !important;
+}
+
+:root[class~="dark"] .error-input {
+  background-color: #4a1d1d !important;
+}
+
+:root[class~="dark"] .error-hint {
+  color: #feb2b2;
+}
+
+:root[class~="dark"] .carousel-wrapper {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+:root[class~="dark"] .submit-btn {
+  background: #4299e1;
+}
+
+:root[class~="dark"] .submit-btn:hover:not(:disabled) {
+  background: #3182ce;
+  box-shadow: 0 4px 12px rgba(49, 130, 206, 0.3);
+}
+
+:root[class~="dark"] .submit-btn:disabled {
+  background: #718096 !important;
+}
+
+/* Dark mode placeholder text */
+:root[class~="dark"] ::placeholder {
+  color: #a0aec0 !important;
+  opacity: 0.7 !important;
 }
