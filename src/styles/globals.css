@@ -16,6 +16,7 @@ body {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,7 +34,7 @@ body {
 }
 
 :root[class~="dark"] body {
-  background-color: #0a0a0a;
+  background-color: #121212;
   color: #f3f4f6;
 }
 
@@ -46,7 +47,7 @@ body {
 
 /* Dark mode styles for all pages */
 :root[class~="dark"] {
-  --bg-primary: #0a0a0a;
+  --bg-primary: #121212;
   --text-primary: #f3f4f6;
   --border-color: #374151;
 }

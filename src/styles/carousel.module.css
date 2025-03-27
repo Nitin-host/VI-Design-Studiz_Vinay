@@ -24,9 +24,9 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    backface-visibility: hidden; /* iOS Fix */
-    -webkit-backface-visibility: hidden; /* Safari fix */
-    transform: translateZ(0); /* Forces GPU rendering on iPhone */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transform: translateZ(0);
 }
 
 @media (max-width: 1024px) {
@@ -44,7 +44,8 @@
 @media (max-width: 768px) {
     .carousel {
         height: 30vh;
-        perspective: 400px;
+        perspective: 600px;
+        margin-top: 20px;
     }
 
     .carouselItem {

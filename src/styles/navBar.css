@@ -1,9 +1,10 @@
 /* Base styles */
 .custom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     gap: 2rem;
-}
-
-.navbar-bg{
     background-color: white;
 }
 
@@ -23,9 +24,18 @@
     color: #ED820E !important;
 }
 
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
 .navbar-brand img{
     width: 50px !important;
     height: 50px !important;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 .dropdown-item:hover {
@@ -34,12 +44,6 @@
 
 .navbar-brand {
     margin-left: 10%;
-}
-
-.navbar-brand img {
-    width: 100px;
-    height: 100px;
-    transition: width 0.3s ease, height 0.3s ease;
 }
 
 .brand-title {
@@ -57,9 +61,9 @@
     letter-spacing: 1.5px;
     width: 100%;
     text-align: center;
-    font-weight: 900;
+    /* font-weight: 900; */
     font-size: 1.5rem;
-    font-weight: bold;
+    /* font-weight: bold; */
     white-space: nowrap;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     display: flex;
@@ -71,21 +75,18 @@
     color: #ED820E !important;
 }
 
-/* Default state for visible button */
 .btn-nav-visible {
     transform: translateY(50%);
     opacity: 1;
     z-index: 2;
 }
 
-/* Default state for hidden button */
 .btn-nav-hidden {
     transform: translateY(90%);
     opacity: 0;
     z-index: 1;
 }
 
-/* Hover effect */
 .btn-navbar:hover .btn-nav-visible {
     transform: translateY(0);
     opacity: 0;
@@ -131,8 +132,12 @@
     }
 
     .btn-navbar {
-        width: 100%;
         text-align: left;
+    }
+
+    .custom-toggler{
+        border: none !important;
+        background: transparent !important;
     }
 }
 
@@ -177,8 +182,8 @@
 
 /*Dark Theme*/
 
-:root[class~="dark"] .navbar-bg{
-    background-color: black !important;
+:root[class~="dark"] .custom-nav{
+    background-color: #121212 !important;
     color: white;
 }
 
@@ -195,13 +200,13 @@
 }
 
 :root[class~="dark"] .navbar-toggler-icon{
-    background-color: white;
-    border-radius: 5px;
+    background-color: #ED820E;
+    border-radius: 3px;
 }
 
 :root[class~="dark"] .navbar-collapse.collapse.show,
 :root[class~="dark"] .navbar-collapse.collapsing{
-  background-color: black !important;
+  background-color: #121212 !important;
   color: white !important;
 }
 
@@ -209,6 +214,7 @@
 :root[class~="dark"] .dropdown-menu,
 :root[class~="dark"] .dropdown-item{
     background-color: black;
+    border-color: #e5e7eb; 
     color: white !important;
 }
 

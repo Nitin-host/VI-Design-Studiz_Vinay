@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Aos from 'aos';
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'reactstrap';
 import Carousel3D from './carousel';
 import MarqueeComponent from './marquee';
 import data from './data.json';

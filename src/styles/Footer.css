@@ -40,7 +40,7 @@
 
 /* Dark theme styles */
 :root[class~="dark"] .footer-container {
-    background-color: #1a1a1a !important;
+    background-color: #1d1c1c !important;
 }
 
 :root[class~="dark"] .footer-link {

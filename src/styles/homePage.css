@@ -299,6 +299,14 @@
     .changing-text {
         width: 40%;
     }
+
+    .sub-about-text{
+        margin-top: 1rem
+    }
+
+    .home-banner-bottom{
+        margin-top: 5.5rem;
+    }
 }
 
 @media (max-width: 576px) {
