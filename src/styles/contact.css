@@ -1,18 +1,7 @@
-/* Base Styles */
 .contact-container {
     margin-top:5rem;
-    font-family: 'open sans-serif';
 }
 
-.contact-container h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  color: #2c3e50;
-  font-weight: 600;
-}
-
-/* Carousel Styles */
 .carousel-wrapper {
   margin: 0 auto 3rem;
   max-width: 1000px;
@@ -21,12 +10,21 @@
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
+/* Enforce uniform card size */
+.carousel-wrapper div {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
 .carousel-image {
   width: 100%;
-  height: auto;
-  max-height: 500px;
+  height: 100%;
   object-fit: cover;
 }
+
 
 /* Form Styles */
 .contact-form {
@@ -189,14 +187,19 @@
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .carousel-wrapper div {
+    height: 400px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-container {
     padding: 1.5rem 1rem;
   }
-  
-  .contact-container h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+
+  .carousel-wrapper div {
+    height: 300px;
   }
   
   .contact-form {
@@ -223,8 +226,8 @@
 }
 
 @media (max-width: 480px) {
-  .contact-container h1 {
-    font-size: 1.75rem;
+  .carousel-wrapper div {
+    height: 250px;
   }
   
   .contact-form {
@@ -244,8 +247,13 @@
 }
 
 /* Dark Mode Styles */
-:root[class~="dark"] .contact-container h1 {
-  color: #f8f9fa;
+
+:root[class~="dark"] .carousel-wrapper{
+  box-shadow: 0 8px 8px #ED820E !important;
+}
+
+:root[class~="dark"] .spinner-border{
+  color: #ED820E;
 }
 
 :root[class~="dark"] .contact-form {

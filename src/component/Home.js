@@ -77,7 +77,7 @@ export default function Home () {
               {home.about.subDescription}
             </h4>
           </Col>
-          <Col xs={12} md={8} className="mt-5 mt-md-0">
+          <Col xs={12} md={8} className="mt-md-0">
             <Carousel3D />
           </Col>
         </Row>

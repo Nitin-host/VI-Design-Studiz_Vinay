@@ -101,13 +101,15 @@ export default class NavBar extends Component {
                 <div className="btn-navbar mt-0">
                   <a
                     href="/contact"
-                    className="btn-nav-visible text-decoration-none fw-bold"
+                    className="btn-nav-visible text-decoration-none"
+                    role="menuitem"
                   >
                     Contact
                   </a>
                   <a
                     href="/contact"
-                    className="btn-nav-hidden text-decoration-none fw-bold"
+                    className="btn-nav-hidden text-decoration-none"
+                    role="menuitem"
                   >
                     Contact
                   </a>

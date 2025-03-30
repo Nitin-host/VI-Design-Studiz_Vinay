@@ -7,7 +7,7 @@
 }
 
 :root[class~="dark"] .section-title{
-    border-bottom: 2px solid white !important;
+    border-bottom: 1px solid white !important;
 }
 
 .project-grid {
