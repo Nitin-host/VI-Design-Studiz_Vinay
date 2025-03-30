@@ -29,6 +29,7 @@ export default class Footer extends Component {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="me-3"
+                                aria-label="Instagram"
                             >
                                 <Instagram  size={40} />
                             </a>
@@ -36,6 +37,7 @@ export default class Footer extends Component {
                                 href='https://wa.me/918143233330'
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label="what's up"
                             >
                                 <img src='/whatsapp.svg' alt='whats-app-logo' style={{ width: '40px' }} />
                             </a>

@@ -238,6 +238,10 @@
     color: rgb(173, 171, 171) !important;
 }
 
+:root[class~="dark"] .about-text{
+    color: #f3f3f3;
+}
+
 
 
 

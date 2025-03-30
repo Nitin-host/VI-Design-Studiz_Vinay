@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-phone-input-2/lib/style.css";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 const items = [
   {
@@ -26,6 +27,7 @@ const items = [
 ];
 
 export default function Contact() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -81,7 +83,10 @@ const validateField = (name, value) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({[name]: value})
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
     validateField(name, value);
   };
 
@@ -90,12 +95,12 @@ const validateField = (name, value) => {
       ...prev,
       phone: `+${value}`,
     }));
-    console.log(value)
     validateField("phone",value);
   };
 
- const handleSubmit = (e) => {
+ const handleSubmit = async(e) => {
    e.preventDefault();
+    setLoading(true);
 
    let hasErrors = false;
    let newErrors = {};
@@ -127,29 +132,38 @@ const validateField = (name, value) => {
      return;
    }
 
-   console.log("Form submitted:", formData);
-   toast.success("Form submitted successfully!", {
-     position: "top-right",
-     autoClose: 3000,
-     hideProgressBar: false,
-     closeOnClick: true,
-     pauseOnHover: true,
-     draggable: true,
-   });
+    try {
+      const response = await axios.post("/api/contact", formData).then(() =>
+        // if (!response.ok) throw new Error("Failed to send email.");
 
-   // Submit logic here (API call, etc.)
-   setFormData({
-     name: "",
-     email: "",
-     phone: "",
-     serviceType: "",
-   });
-   setErrors({
-     name: "",
-     email: "",
-     phone: "",
-     serviceType: "",
-   });
+        toast.success("Form submitted successfully!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        })
+      );
+      // Submit logic here (API call, etc.)
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        serviceType: "",
+      });
+      setErrors({
+        name: "",
+        email: "",
+        phone: "",
+        serviceType: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      toast.error("Failed to send message. Try again later.");
+    } finally {
+      setLoading(false);
+    }
  };
 
 
@@ -180,9 +194,11 @@ const validateField = (name, value) => {
           ))}
         </Slider>
       </div>
-      <div>
+      <div className="mb-4">
         <h1 className="text-start text-uppercase">General Enquiries</h1>
-        <h2 className="">videsignstudio@gmail.com</h2>
+        <h2 className="boder border-bottom d-inline-block">
+          videsignstudio@gmail.com
+        </h2>
       </div>
       <Row>
         <Col xs={12} md={4}>
@@ -190,7 +206,9 @@ const validateField = (name, value) => {
         </Col>
         <Col xs={12} md={8}>
           <h2>Vinay Guptha</h2>
-          <h6>ARCHITECT & INTERIORS</h6>
+          <h6 className="boder border-bottom d-inline-block">
+            ARCHITECT & INTERIORS
+          </h6>
           <p className="contact-cotent">
             {`Vinay is a renowned architect and interior designer with over 6
             years of experience in the field. He has a passion for creating
@@ -246,9 +264,9 @@ const validateField = (name, value) => {
             required
           >
             <option value="">Select a service type</option>
-            <option value="RESIDENTIAL">RESIDENTIAL</option>
-            <option value="COMMERCIAL">COMMERCIAL</option>
-            <option value="INTERIORS">INTERIORS</option>
+            <option value="RESIDENTIAL-INTERIORS">RESIDENTIAL INTERIORS</option>
+            <option value="COMMERCIAL-INTERIORS">COMMERCIAL INTERIORS</option>
+            <option value="ARCHITECTURE">ARCHITECTURE</option>
           </select>
         </div>
 
@@ -266,7 +284,7 @@ const validateField = (name, value) => {
               className: errors.phone ? "error-input" : "",
               placeholder: errors.phone
                 ? "+91 22 1234 5678"
-                : "Enter phone number",
+                : "Enter phone number start's with +91",
             }}
           />
           {errors.phone && (
@@ -277,12 +295,13 @@ const validateField = (name, value) => {
         <button
           type="submit"
           className="submit-btn"
-          disabled={!isFormValid}
-          title={
-            !isFormValid ? "Please fill all required fields correctly" : ""
-          }
+          disabled={!isFormValid || loading}
         >
-          Send Message
+          {loading ? (
+            <span className="spinner-border spinner-border-sm text-primary"></span>
+          ) : (
+            "Submit"
+          )}
         </button>
       </form>
     </section>
