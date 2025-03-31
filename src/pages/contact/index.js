@@ -195,11 +195,14 @@ const validateField = (name, value) => {
         </Slider>
       </div>
       <div className="mb-4">
-        <h1 className="text-start text-uppercase">General Enquiries</h1>
-        <h2 className="boder border-bottom d-inline-block">
+        <h1 className="text-start text-uppercase fs-4 fs-md-3 fs-lg-2">
+          General Enquiries
+        </h1>
+        <h2 className="border-bottom d-inline-block fs-6 fs-md-5 fs-lg-4">
           {`vinay.guptha@videsignstudioz.com`}
         </h2>
       </div>
+
       <Row>
         <Col xs={12} md={4}>
           <Avatar name="Vinay" size={200} src="" round />
