@@ -197,7 +197,7 @@ const validateField = (name, value) => {
       <div className="mb-4">
         <h1 className="text-start text-uppercase">General Enquiries</h1>
         <h2 className="boder border-bottom d-inline-block">
-          videsignstudio@gmail.com
+          {`vinay.guptha@videsignstudioz.com`}
         </h2>
       </div>
       <Row>

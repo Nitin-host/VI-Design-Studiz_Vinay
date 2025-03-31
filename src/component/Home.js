@@ -63,7 +63,7 @@ export default function Home () {
           <Col xs={12} md={4}>
             <div
               data-aos="fade-up"
-              data-aos-once="false"
+              data-aos-once="true"
               data-aos-offset="200"
               data-aos-easing="ease-in-out"
               data-aos-duration="1000"
