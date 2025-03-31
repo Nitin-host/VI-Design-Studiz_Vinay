@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: process.env.EMAIL_USER,
+      user: process.env.NOREPLY_EMAIL,
       pass: process.env.EMAIL_PASS,
     },
     logger: true,
@@ -19,15 +19,14 @@ export default async function handler(req, res) {
     },
   });
 
-  const clientEmail = "guntupallinagasrija@gmail.com";
 
 const mailOptionsUser = {
-  from: process.env.EMAIL_USER,
+  from: process.env.NOREPLY_EMAIL,
   to: email,
   subject: "Service Request Confirmation",
   html: `
     <div style="font-family: Arial, sans-serif; color: #333;">
-      <img src="https://vi-design-studiz-vinay-nitins-projects-a10f7267.vercel.app/logo.png" alt="Service Request" style="max-width: 100%; height: auto;">
+      <img src="https://www.videsignstudioz.com/logo.png" alt="Service Request" style="max-width: 70%; height: auto;">
       <h2>Hello ${name},</h2>
       <p>Thank you for requesting <strong>${serviceType}</strong>. We will contact you at <strong>${phone}</strong> soon.</p>
       <p>Best regards,<br>VI Design Studioz</p>
@@ -37,8 +36,8 @@ const mailOptionsUser = {
 
 
   const mailOptionsClient = {
-    from: process.env.EMAIL_USER,
-    to: clientEmail,
+    from: process.env.NOREPLY_EMAIL,
+    to: process.env.CLIENT_EMAIL,
     subject: "New Service Request",
     text: `New service request received:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nService Type: ${serviceType}`,
   };
