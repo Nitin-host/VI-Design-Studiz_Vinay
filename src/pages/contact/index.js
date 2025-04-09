@@ -205,23 +205,33 @@ const validateField = (name, value) => {
 
       <Row>
         <Col xs={12} md={4}>
-          <Avatar name="Vinay" size={200} src="" round />
+          <div className="text-center text-md-start">
+            <Avatar
+              name="Vinay"
+              size={250}
+              src="/vinay.jpg"
+              round
+              style={{ filter: "grayscale(100%)" }}
+            />
+          </div>
         </Col>
         <Col xs={12} md={8}>
-          <h2>Vinay Guptha</h2>
-          <h6 className="boder border-bottom d-inline-block">
-            ARCHITECT & INTERIORS
-          </h6>
-          <p className="contact-cotent">
-            {`Vinay is a renowned architect and interior designer with over 6
-            years of experience in the field. He has a passion for creating
-            visually appealing and sustainable spaces. He is a firm believer in
-            the power of design to bring people together and create a positive
-            impact on the world. Vinay has worked in various industries,
-            including architecture, interior design, and urban planning. He is
-            currently working as a Principal Architect at a prestigious
-            engineering firm.`}
-          </p>
+         <div className="text-center text-md-start">
+            <h2>Vinay Guptha</h2>
+            <h6 className="boder border-bottom d-inline-block">
+             ARCHITECT & INTERIORS
+            </h6>
+         </div>
+          <div className="contact-content">
+            <p>
+              {`Vinay Guptha Renowned Architect & Interior Designer | Creating Timeless, Sustainable Spaces.`}
+            </p>
+            <p>
+              {`With over 6 years of diverse experience in Architecture, Interior Design, and Landscape Design, Vinay Guptha is a visionary professional known for crafting aesthetically captivating and environmentally conscious spaces. Driven by a deep passion for meaningful design, he believes in the transformative power of architecture to connect people, inspire communities, and create a lasting positive impact on the world.
+              Vinay's work seamlessly blends creativity with functionality, offering clients not just spaces—but experiences that reflect their dreams, values, and future aspirations. Whether it’s a cozy residence, a dynamic workspace, or a serene landscape, his designs are a testament to innovation, sustainability, and human-centric thinking.
+              Let your space tell your story—crafted with care, vision & purpose.`}
+            </p>
+          </div>
         </Col>
       </Row>
 

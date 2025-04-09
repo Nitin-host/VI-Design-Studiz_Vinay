@@ -189,16 +189,19 @@ export default function Home () {
           </div>
         </div>
 
-        <div className="mt-5">
-          <Image
-            width={500}
-            height={500}
-            quality={80}
-            src={home.services.image}
-            style={{ width: "100%", height: "100%" }}
-            alt="image"
-            className="service-image"
-          />
+        <div className="">
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Image
+              width={500}
+              height={500}
+              quality={80}
+              src={home.services.image}
+              style={{ width: "70%", height: "80%" }}
+              alt="image"
+              className="service-image"
+            />
+          </div>
+
           <div data-aos="fade-up" data-aos-once="true">
             <h3 className="service-subtitle">{home.services.subtitle}</h3>
             <h1 className="service-title mb-5">{home.services.title}</h1>
@@ -216,6 +219,7 @@ export default function Home () {
             </div>
           </div>
         </div>
+
         <div>
           <Image
             width={600}

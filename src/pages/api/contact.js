@@ -28,7 +28,7 @@ const mailOptionsUser = {
     <div style="font-family: Arial, sans-serif; color: #333;">
       <img src="https://www.videsignstudioz.com/logo.png" alt="Service Request" style="max-width: 70%; height: auto;">
       <h2>Hello ${name},</h2>
-      <p>Thank you for requesting <strong>${serviceType}</strong>. We will contact you at <strong>${phone}</strong> soon.</p>
+      <p>Thank you for requesting <strong>VI Design Studioz</strong>. We will contact you shortly at <strong>${phone}</strong> soon.</p>
       <p>Best regards,<br>VI Design Studioz</p>
     </div>
   `,
