@@ -12,22 +12,22 @@ import '../styles/Footer.css';
 import '../styles/contact.css';
 
 const titleMap = {
-    '/': 'VI Design Studio',
-    '/interiors': 'INTERIORS | VI Design Studio',
-    '/land-scape': 'LANDSCAPE | VI Design Studio',
-    // '/architecture': 'ARCHITECTURE | VI Design Studio',
-    // '/project': 'PROJECT | VI Design Studio',
-    '/contact': 'CONTACT | VI Design Studio',
+    '/': 'VI Design Studioz',
+    '/interiors': 'INTERIORS | VI Design Studioz',
+    '/land-scape': 'LANDSCAPE | VI Design Studioz',
+    // '/architecture': 'ARCHITECTURE | VI Design Studioz',
+    // '/project': 'PROJECT | VI Design Studioz',
+    '/contact': 'CONTACT | VI Design Studioz',
 };
 
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
-    const [title, setTitle] = useState('VI Design Studio');
+    const [title, setTitle] = useState('VI Design Studioz');
 
     useEffect(() => {
         const handleRouteChange = (url) => {
-            const pageTitle = titleMap[url] || 'VI Design Studio';
+            const pageTitle = titleMap[url] || 'VI Design Studioz';
             setTitle(pageTitle);
         };
 
